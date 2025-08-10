@@ -67,7 +67,7 @@ app.use(
   express.urlencoded({ extended: true }),
   apex
 )
-// define routes using prepacakged middleware collections
+// define routes using prepackaged middleware collections
 app.route(routes.inbox)
   .get(apex.net.inbox.get)
   .post(apex.net.inbox.post)
@@ -117,7 +117,7 @@ messages from another app (e.g. Mastodon), you'll want to define custom side-eff
 using `app.on('apex-inbox', ({ actor, activity, recipient, object }) => {...})`, which
 is fired for each incoming message.
 
-For an example of a server-to-server app build with activitypub-expresss,
+For an example of a server-to-server app build with activitypub-express,
 check out [Guppe Groups](https://a.gup.pe) - the federated social groups
 app server built with just [250 lines of code](https://github.com/immers-space/guppe/blob/main/index.js).
 
